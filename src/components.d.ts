@@ -4,6 +4,34 @@
  * and imports for stencil collections that might be configured in your stencil.config.js file
  */
 
+import { Dropdown as ButtonDropdown } from './components/button-dropdown/button-dropdown';
+
+interface HTMLButtonDropdownElement extends ButtonDropdown, HTMLElement {
+}
+declare var HTMLButtonDropdownElement: {
+  prototype: HTMLButtonDropdownElement;
+  new (): HTMLButtonDropdownElement;
+};
+declare global {
+  interface HTMLElementTagNameMap {
+      "button-dropdown": HTMLButtonDropdownElement;
+  }
+  interface ElementTagNameMap {
+      "button-dropdown": HTMLButtonDropdownElement;
+  }
+  namespace JSX {
+      interface IntrinsicElements {
+          "button-dropdown": JSXElements.ButtonDropdownAttributes;
+      }
+  }
+  namespace JSXElements {
+      export interface ButtonDropdownAttributes extends HTMLAttributes {
+        
+          title?: string
+      }
+  }
+}
+
 import { MyName as MyName } from './components/my-name/my-name';
 
 interface HTMLMyNameElement extends MyName, HTMLElement {
@@ -27,8 +55,8 @@ declare global {
   namespace JSXElements {
       export interface MyNameAttributes extends HTMLAttributes {
         
-          first?: any,
-          last?: any
+          first?: string,
+          last?: string
       }
   }
 }

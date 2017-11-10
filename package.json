@@ -1,14 +1,14 @@
 {
-  "name": "my-name",
-  "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "name": "button-dropdown-stencil-test",
+  "version": "0.0.2",
+  "description": "Test Stencil Component to see how we can use it in Angular, React, Vue, etc",
   "main": "dist/collection/index.js",
   "types": "dist/collection/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "files": [
     "dist/"
   ],
-  "browser": "dist/myname.js",
+  "browser": "dist/buttondropdownstenciltest.js",
   "scripts": {
     "build": "stencil build",
     "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",

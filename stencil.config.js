@@ -1,8 +1,8 @@
 exports.config = {
-  namespace: 'myname',
+  namespace: 'ButtonDropdownStencilTest',
   generateDistribution: true,
   bundles: [
-    { components: ['my-name'] }
+    { components: ['button-dropdown'] }
   ]
 };
 
